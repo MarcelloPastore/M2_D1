@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Outfit', sans-serif;
+}
+body {
+    /* height: 1000vh; */
+}
+/* per evitare problemi metto l'header in un div per fissarlo senza incasinare il codice */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+/* inizio a modificare la navbar */
+header {
+    display: flex;
+    background: linear-gradient(46.03deg,#101023 14.21%,#192155 83.82%);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.navBar {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 15%;
+}
+.menu span{
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+    /* credo la classe active per definire quale pagina stiamo visualizzando attualmente*/
+.active {
+    background-color: aqua;
+    color: black;
+}
+.flag {
+    width: 24px;
+}
+.flagBox {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+/*passiamo al pezzo forte, il contenuto del body*/
+/* qui abbiamo l'inizio, lasection 1 o HERO kekw */
+.parteUno {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(46.03deg,#101023 14.21%,#192155 83.82%);
+}
+/* mi definisco un container flex dove avro i due div, uno con l'immagine e laltro con il testo*/
+.container {
+    /* border: 1px solid yellow; */
+    display: flex;
+    width: 70%;
+    margin: 4rem;
+}
+.testo {
+    /* border: 1px solid aquamarine; */
+    color: white;
+    max-width: 60%;
+    font-size: 22px;
+    line-height: 140%;
+
+}
+/* definisco la lista nello stesso ed identico modo arcano di Epicode */
+.testo ul {
+  list-style: none; /* Remove list bullets */
+  padding: 15px;
+  margin: 0;
+}
+
+.testo li {
+  padding-left: 16px;
+}
+
+.testo li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: linear-gradient(46.03deg,#CB2376 14.21%,#FF00D6 83.82%);
+    display: inline-block;
+    margin-right: 8px;
+}
+#title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 140%;
+}
+/* modifico il bottone candidati */
+.testo a {
+    padding: 10px 20px 10px 15px;
+    color: black;
+    background-color: aqua;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 20px;
+}
+
+/* qui si passa alle immagini dei nostri 'hero' */
+.hero {
+    /* border: 1px solid black; */
+    background-image: url(https://epicode.com/wp-content/uploads/2022/05/epicode-svg-animation-1.svg);
+    background-size: contain;
+    width: 500px;
+    background-repeat: no-repeat;
+    
+}
+.hero img {
+    width: 100%;
+    object-fit: contain;
+}
+/* fine della section hero ora si passa alla prssima */
+.parteDue {
+    background: linear-gradient(46.03deg,#1c1c41 14.21%,#1f2a72 83.82%);
+    color: white;
+    /* border: 1px solid magenta; */
+    display: flex;
+    justify-content: center;
+      
+    /* grandezza momentanea */
+}
+/* definisco la dimensione del contaier  */
+.containerDue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 4rem;
+}
+
+.testoDue {
+    text-align: center;
+}
+.testoDue h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 67px;
+}
+.testoDue p {
+    margin-top: .5rem;
+    font-size: 18px;
+}
+/* dopo il testo mi preparo a definire le card  he contengono i passi da fare */
+.cardContainer {
+    display: flex;
+}
+.cardWrapper {
+    background: linear-gradient(90deg,#2d27df 0%,#cb2376 100%);
+    border-radius: 16px;
+    padding: 3px!important;
+    margin: 20px;
+}
+.card{
+    padding: 24px;
+    background: linear-gradient(46.03deg,#101023 14.21%,#192155 83.82%);
+    border-radius: 16px;
+}
+.card div {
+    display: flex;
+    align-items: center;
+   
+}
+.card div > img {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.card div > h4 {
+    line-height: 29px;
+    font-size: 21px;
+}
+.cardText {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.spacing {
+    width: 25%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* metto subito il bottone in basso centrandolo e creandone i contorni */
+.button a {
+    padding: 10px 20px 10px 15px;
+    color: black;
+    background: aqua;
+    border-radius: 6px;
+    font-size: 18px;
+}
+.button {
+    margin-top: 20px;
+}
+/* finita la parte due inizio con la terza parte */
+.parteTre {
+    /* border: 1px solid rgb(234, 255, 0); */
+    background: linear-gradient(68.97deg,#101023 24.3%,#192155 76.31%);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.containerTre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 4rem;
+}
+/* definisco un container che contiene le date disponibili */
+.dataContainer {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+/* procedo nella creazione delle card */
+.dataCard {
+    margin: 1rem;
+    padding: 15px;
+    background: #FFF;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    border-radius: 6px;
+    
+}
+.dataCard h4 {
+    font-size: 28px;
+    line-height: 138%;
+    color: #101023;
+    margin: 10px 0px 20px;
+}
+.dataCard p:first-of-type {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%!important;
+    color: #34363f!important;
+    margin: 0px 0px 40px;
+}
+.dataCard a {
+    min-width: 100px;
+    min-height: 52px;
+    padding-top: 16px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    border-width: 1px;
+    border-radius: 6px;
+    background-color: #950484;
+    color: #fff;
+}
+.dataCard p:last-of-type {
+    letter-spacing: .5px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #950484;
+    margin-bottom: 30px;
+}
+.dataCard div {
+    margin: 10px;
+}
+/* Fine parte tre delle date */
+/* inizio parte quattro elle richieste */
+.parteQuattro {
+    /* border: 1px solid rgb(253, 40, 249); */
+    background: #192155;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.containerQuattro {
+    display: flex;
+    width: 70%;
+    margin: 4rem;
+}
+/* definisco il container del testo e ne modifico gli elementi */
+.testoTre {
+    flex: none;
+    width: 50%;
+}
+.testoTre span {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 8px;
+}
+.testoTre h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    margin-bottom: 24px;
+}
+.testoTre p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-right: 24px;
+    margin-bottom: 32px;
+}
+/* definisco lo stile di immissione degli imput iniziali e la loro dimensione */
+.request {
+    margin-left: 7%;
+    display: flex;
+    flex-direction: column;
+}
+.inputTop  input[type=text]{
+    float: right;
+    padding: 8px;
+    border: none;
+    margin-bottom: 18px;
+    margin-right: 20px;
+    font-size: 17px;
+    border-radius: 6px;
+}
+/* definisco una lista con radiotype input */
+.list input {
+    margin-left: 8px;
+    margin-bottom: 12px;
+}
+.small_p {
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+.list span {
+    font-size: 14px;
+}
+.b {
+    color: red;
+}
+/* definisco la parte inferiore */
+/*! non ho fatto il menù dropdown perché per farlo uguale richiedeva javascript */
+.select {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+.select input {
+    padding: 8px;
+    font-size: 17px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+}
+.privacy a {
+    text-decoration: underline;
+}
+.center {
+    display: inline-flex;
+    justify-content: center;
+}
+/* finita la parte quattro inizio la quinta o carosello uno */
+.caroselloUno {
+    background: #101023;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.containerCinque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0rem 3rem 3rem 3rem;
+}
+.carosello {
+    margin: 4rem 0rem 0rem 0rem;
+}
+/* fine parte cinque */
+/* inizio parte sei, ambassador */
+.caroselloDue {
+    background: linear-gradient(46.03deg,#101023 14.21%,#192155 83.82%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.containerSei {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.testoQuattro {
+    width: 35%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.testoQuattro h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 33px;
+    margin-bottom: 2rem;
+}
+/* card dontainer degli ambassador */
+.ambassadorContainer {
+    width: 65%;
+}
+.cardContainer2 {
+    display: flex;
+}
+.ambassadorCard {
+    background: white;
+    border-radius: 6px;
+    color: black;
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    align-items: center;
+}
+.ambassadorCard div p:first-child {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.ambassadorCard div p:last-child {
+    font-size: small;
+}
+.ambassImg img{
+    width: 49px;
+    margin: 10px;
+}
+.linkedin img {
+    width: 30px;
+    margin-left: 10px;
+}
+/* fine parte sei */
+/* inizio footer */
+footer {
+
+}
+
